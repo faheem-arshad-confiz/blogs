@@ -5,22 +5,13 @@
 
 BlogJS is a simple blog application built with AngularJS, Node.js and MongoDB. Creates your article and shares them in a beautiful minimalistic template.
 
-## Features
-
-- [x] Create Article
-- [x] Edit Article
-- [x] Delete Article
-- [x] Add tags to Article
-- [x] Add Authentication to the administration
-- [x] Add registration for new user
-- [x] Handle Logout
-- [ ] Add users management
-- [x] Add Like to post
-- [ ] Add Comments to post
-- [ ] Add Like to comment
-
 
 ## Dependencies
+You need `node v18.15.0`
+
+You need `yarn`
+
+You need `Angular 15`
 
 You need `redis-2.8.9` up and running on port `6379`
 
@@ -28,13 +19,13 @@ You need `mongodb-2.4.10` up and running on port `27017`
 
 ## Installation
 
-Clone the repository with: `kevin@home:/$ git clone https://github.com/kdelemme/blogjs.git`
+Clone the repository with: `https://github.com/faheem-arshad-confiz/blogs.git`
 
 ### Start Redis
 
 Start your redis instance:
 ```bash
-kevin@home:/var/www/angular/blogjs$ redis-server 
+/var/www/angular/blogjs$ redis-server 
                 _._                                                  
            _.-``__ ''-._                                             
       _.-``    `.  `_.  ''-._           Redis 2.8.9 (00000000/0) 64 bit
@@ -59,33 +50,26 @@ kevin@home:/var/www/angular/blogjs$ redis-server
 
 ### Build angularjs app
 
-The build result is already available, but if you want to build it yourself, install gulp and the dependencies, then run it.
+install gulp and the gulp dependencies: `yarn install`
 
-install gulp and the gulp dependencies: `kevin@home:/blogjs$ npm install`
-
-Edit app/js/app.js and replace the value of `options.api.base_url` to match your server configuration.
-
-Run gulp to build the scripts of the AngularJS app with: `kevin@home:/blogjs$ gulp`
+Build Angularjs app `yarn workspace blog-app run build`
 
 ### Install Nodejs App
 
-Go to the api folder and install the dependencies: `kevin@home:/blogjs/api$ npm install`
-
-Edit api/blog.js and replace the value of Access-Control-Allow-Origin to match your server configuration.
-
-Run the application: `kevin@home:/blogjs/api$ node blog.js`
+Run the application: `yarn workspace blog run start`
 
 ## Run
 
-You can now open your browser: `http://localhost/blogjs/app`
+You can now open your browser: `http://localhost:3000/#!/`
 
-Create a first account on `http://localhost/blogjs/app/#/admin/register`
+Create a first account on `http://localhost:3000/#!/admin/register`
 
-To access the Administration, go to `http://localhost/blogjs/app/#/admin/login`
+To access the Administration, go to `http://localhost:3000/#!/admin/login`
 
 ## Stack
 
 * AngularJS
+* Angular15
 * Bootstrap
 * MongoDB
 * Redis
@@ -93,27 +77,4 @@ To access the Administration, go to `http://localhost/blogjs/app/#/admin/login`
 
 ## Licence
 The MIT License (MIT)
-
-Copyright (c) 2014 Brother (brother@gmail.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kdelemme/blogjs/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
