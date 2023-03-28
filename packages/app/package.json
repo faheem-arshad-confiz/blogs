@@ -1,0 +1,28 @@
+{
+  "name": "blog-app",
+  "description": "Blog angularjs app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=development --config webpack.config.js"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "angular": "^1.8.3",
+    "angular-route": "^1.8.3",
+    "bootstrap": "^5.2.3",
+    "gulp": "~3.6.2",
+    "gulp-concat": "~2.2.0",
+    "gulp-less": "~1.2.3",
+    "jquery": "^3.6.4",
+    "less": "~1.7.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
+  }
+}
