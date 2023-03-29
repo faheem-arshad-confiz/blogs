@@ -72,7 +72,7 @@ app.get('/rss', routes.rss.index);
 
 
 // clientApp.use('*', express.static('../app'));
-clientApp.use("/", express.static("../ajs-to-ng"));
+clientApp.use("/", express.static("../ajs"));
 clientApp.listen(3000)
 
 console.log('Blog API is starting on port 3001');

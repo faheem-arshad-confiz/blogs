@@ -10,6 +10,7 @@ packages/angularjs-to-angular15/bazel-out
 packages/api/config/snapshots
 packages/api/node_modules
 packages/app/node_modules
+packages/ajs/node_modules
 packages/ajs-to-ng/node_modules
 /node_modules
 
