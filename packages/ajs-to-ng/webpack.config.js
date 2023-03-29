@@ -1,25 +1,3 @@
-/* const path = require("path");
-
-module.exports = {
-  entry: "./js/main.ts",
-  output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "bundle.js",
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
-      },
-    ],
-  },
-}; */
-
 const path = require('path');
 const webpack = require('webpack');
 
@@ -43,16 +21,6 @@ module.exports = {
           {
             test: /\.(png|svg|jpg|gif)$/,
             use: ["file-loader"],
-          },
-          {
-            test: /\.m?js$/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                compact: false,
-                cacheDirectory: true,
-              }
-            }
           }
         ],
     },

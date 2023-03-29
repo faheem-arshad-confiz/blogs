@@ -21,11 +21,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     BrowserModule,
     UpgradeModule
   ],
-  providers: [
-    // Contact,
-    // ContactService,
-    // toasterServiceProvider
-  ]
+  providers: []
 })
 export class AppModule {
   // Override Angular bootstrap so it doesn't do anything
