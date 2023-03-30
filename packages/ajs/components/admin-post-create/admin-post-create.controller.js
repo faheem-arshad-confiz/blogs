@@ -18,7 +18,6 @@ const AdminPostCreateController = [
           }
 
           PostService.create(post)
-            .then((res) => res.data)
             .then(function (data) {
               $location.path("/admin");
             })

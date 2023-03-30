@@ -15,7 +15,6 @@ const AdminPostEditController = [
     var id = $routeParams.id;
 
     PostService.read(id)
-      .then((res) => res.data)
       .then(function (data) {
         $scope.post = data;
       })
@@ -41,7 +40,6 @@ const AdminPostEditController = [
           }
 
           PostService.update(post)
-            .then((res) => res.data)
             .then(function (data) {
               $location.path("/admin");
             })

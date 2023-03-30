@@ -8,7 +8,6 @@ const PostListTagController = [
     var tagName = $routeParams.tagName;
 
     PostService.findByTag(tagName)
-      .then((res) => res.data)
       .then(function (data) {
         for (var postKey in data) {
           data[postKey].content = $sce.trustAsHtml(data[postKey].content);

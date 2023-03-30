@@ -6,7 +6,6 @@ const AdminPostListController = [
     $scope.posts = [];
 
     PostService.findAll()
-      .then((res) => res.data)
       .then(function (data) {
         $scope.posts = data;
       });
@@ -17,7 +16,6 @@ const AdminPostListController = [
     ) {
       if (post != undefined && shouldPublish != undefined) {
         PostService.changePublishState(post._id, shouldPublish)
-          .then((res) => res.data)
           .then(function (data) {
             var posts = $scope.posts;
             for (var postKey in posts) {
@@ -37,7 +35,6 @@ const AdminPostListController = [
     $scope.deletePost = function deletePost(id) {
       if (id != undefined) {
         PostService.delete(id)
-          .then((res) => res.data)
           .then(function (data) {
             var posts = $scope.posts;
             for (var postKey in posts) {

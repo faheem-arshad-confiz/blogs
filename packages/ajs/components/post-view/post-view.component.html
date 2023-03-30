@@ -1,0 +1,24 @@
+<section class="post">
+    <header class="post-header">
+        <img class="post-avatar" alt="Brother" height="52" width="52" src="assets/img/avatar.jpg">
+        <h2 class="post-title"><a href="#/post/{{post._id}}">{{post.title}}</a></h2>
+        <div class="post-meta"><i class="fa fa-bullseye"></i> Posted on {{post.created | date:'medium'}}</div>
+        <div class="post-meta"><i class="fa fa-thumbs-up"></i> {{post.likes}}</div>
+        <div class="post-meta">
+        	<ul class="list-inline">
+                <i class="fa fa-tags"></i> 
+                <li *ngFor="let tag of post.tags;">
+                    <a class="label label-success" href="#/tag/{{tag}}">{{tag}}</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="post-content">
+        <p [innerHTML]="post.content"></p>
+    </div>
+    <footer class="post-footer">
+        <button (click)="likePost()" class="btn btn-xs btn-success" *ngIf="!isAlreadyLiked">Like</button>
+        <button (click)="unlikePost()" class="btn btn-xs btn-success" *ngIf="isAlreadyLiked">Unlike</button>
+        {{post.likes}} <i class="fa fa-thumbs-up"></i>
+    </footer>
+</section>
